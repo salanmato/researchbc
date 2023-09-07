@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pesquisa</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">home</a></h1>
+        <h1><a href="/html/lista.html">respostas</a></h1>
+        <h1><a href="/html/resultados.html">resultados</a></h1>
+    </header>
+    <form id="research-forms">
+        <label for="name">Nome:</label>
+        <input id="name" name="name" placeholder="Input your name" type="text" required/>
+        <label for="ra">RA:</label>
+        <input id="ra" name="ra" placeholder="Input your RA" type="number" required/>
+        <label for="email">email:</label>
+        <input id="email" name="email" placeholder="email@mail.com" type="email" required/>
+
+        <!-- Questões não definidas-->
+        <h2>Áreas de Interesse</h2>
+        <label for="web">Desenvolvimento WEB:</label>
+        <input type="range" id="web" name="web" min="1" max="5" step="1" required>
+
+        <input id="submit-button" type="submit" value="Enviar resposta!" />
+    </form>
+
+
+    
+    <script type="module" src="/javascript/script.js"></script>
+</body>
+
+</html>
