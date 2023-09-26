@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pesquisa</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Pesquisa</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -15,23 +15,45 @@
         <h1><a href="/html/resultados.html">resultados</a></h1>
     </header>
     <form id="research-forms">
-        <label for="name">Nome:</label>
-        <input id="name" name="name" placeholder="Input your name" type="text" required/>
-        <label for="ra">RA:</label>
-        <input id="ra" name="ra" placeholder="Input your RA" type="number" required/>
-        <label for="email">email:</label>
-        <input id="email" name="email" placeholder="email@mail.com" type="email" required/>
+        <div class="personal-info">
+            <label for="name">Nome:</label>
+            <input id="name" name="name" placeholder="Input your name" type="text" required />
+
+            <label for="ra">RA:</label>
+            <input id="ra" name="ra" placeholder="Input your RA" type="number" required />
+            
+            <label for="email">email:</label>
+            <input id="email" name="email" placeholder="email@mail.com" type="email" required />
+        </div>
 
         <!-- Questões não definidas-->
         <h2>Áreas de Interesse</h2>
         <label for="web">Desenvolvimento WEB:</label>
-        <input type="range" id="web" name="web" min="1" max="5" step="1" required>
+        <input type="range" id="web" name="web" min="1" max="5" step="1">
+
+        <label for="mobile">Desenvolvimento Mobile:</label>
+        <input type="range" id="mobile" name="mobile" min="1" max="5" step="1">
+
+        <label for="desktop">Desenvolvimento Desktop:</label>
+        <input type="range" id="desktop" name="desktop" min="1" max="5" step="1">
+
+        <label for="games">Desenvolvimento de Games:</label>
+        <input type="range" id="games" name="games" min="1" max="5" step="1">
+
+        <label for="infra">Infraestrutura:</label>
+        <input type="range" id="infra" name="infra" min="1" max="5" step="1">
+
+        <label for="seguranca">Segurança:</label>
+        <input type="range" id="seguranca" name="seguranca" min="1" max="5" step="1">
+
+        <label for="projetos">Projetos:</label>
+        <input type="range" id="projetos" name="projetos" min="1" max="5" step="1">
 
         <input id="submit-button" type="submit" value="Enviar resposta!" />
     </form>
 
 
-    
+
     <script type="module" src="/javascript/script.js"></script>
 </body>
 
