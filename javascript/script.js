@@ -1,9 +1,7 @@
 const researchForms = document.querySelector('#research-forms')
-const submitButton = document.querySelector('#submit-button')
-
 
 //agrupar as entradas e transformar em objeto
-function getFormData(e) {
+function getFormData() {
 
     const formData = {
         name: researchForms.querySelector('#name').value,
@@ -20,7 +18,10 @@ function getFormData(e) {
         }
     }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     saveInLocalStorage(formData)
 }
 
@@ -33,10 +34,14 @@ function saveInLocalStorage(formData) {
 
 
 //inicia a chamada
+<<<<<<< Updated upstream
 submitButton.addEventListener('click', getFormData)
 
 
 
 
 //checar se as infos são válidas.
+=======
+researchForms.addEventListener('submit', getFormData)
+>>>>>>> Stashed changes
 

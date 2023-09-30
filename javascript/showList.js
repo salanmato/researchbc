@@ -1,17 +1,14 @@
 const respostas = document.querySelector('.respostas')
 
-
 //mostrando as respostas
 function answerList(){
-    let answers = JSON.parse(localStorage.getItem('respostas'))
-    let table = document.querySelector('.respostas')
-    
+    let answers = JSON.parse(localStorage.getItem('respostas'))    
     
     answers.forEach(answer => {
         //linha
-        let row = document.createElement('tr')
+        let row = document.createElement('tr') //table row
         //itens
-        let nome = document.createElement('td')
+        let nome = document.createElement('td') 
         let ra = document.createElement('td')
         let email = document.createElement('td')
         let web = document.createElement('td')
@@ -52,3 +49,4 @@ function answerList(){
 }
 
 answerList()
+

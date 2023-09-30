@@ -13,18 +13,18 @@ body {
     background-color: var(--back-color);
 }
 
-header {
+nav {
     display: flex;
     flex-direction: row;
     text-align: center;
     background-color: var(--main-color);
 }
 
-header h1 {
+nav h1 {
     margin: 20px auto;
 }
 
-header a {
+nav a {
     text-decoration: none;
     color: var(--font-color);
 }
@@ -39,7 +39,7 @@ header a {
     margin: 50px 0;
 }
 
-label {
+#research-forms label {
     font-size: 20px;
     font-weight: 500;
 }

@@ -20,7 +20,6 @@ respostas.forEach(resposta => {
     totalProjetos += parseInt(resposta.disciplinas.projetos)
 })
 
-
 //grafico de exibição
 const ctx = document.getElementById('myChart')
 new Chart(ctx, {
