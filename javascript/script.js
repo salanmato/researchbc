@@ -6,9 +6,9 @@ const submitButton = document.querySelector('#submit-button')
 function getFormData(e) {
 
     const formData = {
-        name: researchForms.querySelector('#name').value,
-        ra: researchForms.querySelector('#ra').value,
-        email: researchForms.querySelector('#email').value,
+        name: researchForms.querySelector('#name').value.trim(),
+        ra: researchForms.querySelector('#ra').value.trim(),
+        email: researchForms.querySelector('#email').value.trim(),
         disciplinas: {
             web: researchForms.querySelector('#web').value,
             mobile: researchForms.querySelector('#mobile').value,
@@ -19,8 +19,7 @@ function getFormData(e) {
             projetos: researchForms.querySelector('#projetos').value
         }
     }
-
-
+    
     saveInLocalStorage(formData)
 }
 
@@ -31,12 +30,5 @@ function saveInLocalStorage(formData) {
     localStorage.setItem('respostas', JSON.stringify(answerList))
 }
 
-
 //inicia a chamada
-submitButton.addEventListener('click', getFormData)
-
-
-
-
-//checar se as infos são válidas.
-
+researchForms.addEventListener('submit', getFormData)
