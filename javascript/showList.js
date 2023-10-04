@@ -1,6 +1,7 @@
 const respostas = document.querySelector('.respostas')
 
 
+<<<<<<< Updated upstream
 //mostrando as respostas
 function answerList(){
     let answers = JSON.parse(localStorage.getItem('respostas'))
@@ -33,6 +34,19 @@ function answerList(){
         infra.innerText = answer.disciplinas.infra
         seguranca.innerText = answer.disciplinas.seguranca
         projetos.innerText = answer.disciplinas.projetos
+=======
+        //inserindo informação
+        nome.innerText = answer.nome
+        ra.innerText = answer.ra
+        email.innerText = answer.email
+        web.innerText = answer.web
+        mobile.innerText = answer.mobile
+        desktop.innerText = answer.desktop
+        games.innerText = answer.games
+        infra.innerText = answer.infra
+        seguranca.innerText = answer.seg
+        projetos.innerText = answer.projetos
+>>>>>>> Stashed changes
 
         row.appendChild(nome)
         row.appendChild(ra)
@@ -45,6 +59,7 @@ function answerList(){
         row.appendChild(seguranca)
         row.appendChild(projetos)
 
+<<<<<<< Updated upstream
         respostas.appendChild(row)
     })
 
@@ -52,3 +67,8 @@ function answerList(){
 }
 
 answerList()
+=======
+        respostas.appendChild(row)}))
+    .catch(error => console.log(error))
+    
+>>>>>>> Stashed changes
