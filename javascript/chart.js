@@ -1,15 +1,28 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 const respostas = JSON.parse(localStorage.getItem('respostas'))
+=======
+const url = 'http://localhost:3002/api/get'
+>>>>>>> Stashed changes
 
-//variaveis do gráfico
-let totalWeb = 0
-let totalMobile = 0
-let totalDesktop = 0
-let totalGames = 0
-let totalInfra = 0
-let totalSeguranca = 0
-let totalProjetos = 0
+fetch(url).then(response => response.json())
+    .then(respostas => {
+        const ctx = document.getElementById('myChart')
+        new Chart(ctx, {
+            type: 'polarArea',
+            data: {
+                labels: ['WEB', 'Mobile', 'Desktop', 'Games', 'Infra', 'Segurança', 'Projetos'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [respostas.reduce((acc, resp) => acc + resp.web, 0), 
+                    respostas.reduce((acc, resp) => acc + resp.mobile, 0),
+                    respostas.reduce((acc, resp) => acc + resp.desktop, 0),
+                    respostas.reduce((acc, resp) => acc + resp.games, 0),
+                    respostas.reduce((acc, resp) => acc + resp.infra, 0),
+                    respostas.reduce((acc, resp) => acc + resp.seg, 0),
+                    respostas.reduce((acc, resp) => acc + resp.projetos, 0)],
 
+<<<<<<< Updated upstream
 //calculando as respostas
 respostas.forEach(resposta => {
     totalWeb += parseInt(resposta.disciplinas.web)
@@ -68,6 +81,8 @@ fetch(url)
                             data.reduce((acc, e) => acc + e.infra, 0),
                             data.reduce((acc, e) => acc + e.seg, 0),
                             data.reduce((acc, e) => acc + e.projetos, 0)],
+=======
+>>>>>>> Stashed changes
                     borderWidth: 2,
                     hoverBorderColor: 'lightgrey',
                     borderJoinStyle: 'round',
@@ -88,7 +103,16 @@ fetch(url)
                         beginAtZero: true
                     }
                 }
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
             }
         });
     })
+=======
+            }
+        })
+    }
+    
+)
+
+>>>>>>> Stashed changes

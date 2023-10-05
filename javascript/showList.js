@@ -1,5 +1,6 @@
 const respostas = document.querySelector('.respostas')
 
+<<<<<<< Updated upstream
 
 <<<<<<< Updated upstream
 //mostrando as respostas
@@ -35,6 +36,25 @@ function answerList(){
         seguranca.innerText = answer.disciplinas.seguranca
         projetos.innerText = answer.disciplinas.projetos
 =======
+=======
+const url = 'http://localhost:3002/api/get'
+fetch(url).then(response => response.json())
+    .then(data => data.map(answer => {
+        //linha
+        let row = document.createElement('tr') //table row
+        //itens
+        let nome = document.createElement('td')
+        let ra = document.createElement('td')
+        let email = document.createElement('td')
+        let web = document.createElement('td')
+        let mobile = document.createElement('td')
+        let desktop = document.createElement('td')
+        let games = document.createElement('td')
+        let infra = document.createElement('td')
+        let seguranca = document.createElement('td')
+        let projetos = document.createElement('td')
+
+>>>>>>> Stashed changes
         //inserindo informação
         nome.innerText = answer.nome
         ra.innerText = answer.ra
@@ -46,6 +66,9 @@ function answerList(){
         infra.innerText = answer.infra
         seguranca.innerText = answer.seg
         projetos.innerText = answer.projetos
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
         row.appendChild(nome)
@@ -61,6 +84,7 @@ function answerList(){
 
 <<<<<<< Updated upstream
         respostas.appendChild(row)
+<<<<<<< Updated upstream
     })
 
     
@@ -71,4 +95,8 @@ answerList()
         respostas.appendChild(row)}))
     .catch(error => console.log(error))
     
+>>>>>>> Stashed changes
+=======
+    }))
+    .catch(error => console.log(error))
 >>>>>>> Stashed changes
