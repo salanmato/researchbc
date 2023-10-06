@@ -16,18 +16,18 @@ fetch(url).then(response => response.json())
                     respostas.reduce((acc, resp) => acc + resp.infra, 0),
                     respostas.reduce((acc, resp) => acc + resp.seg, 0),
                     respostas.reduce((acc, resp) => acc + resp.projetos, 0)],
-
+                    
                     borderWidth: 2,
                     hoverBorderColor: 'lightgrey',
                     borderJoinStyle: 'round',
                     backgroundColor: [
-                        'rgb(247, 37, 133)',
-                        'rgb(181, 23, 158)',
-                        'rgb(114, 9, 183)',
-                        'rgb(72, 12, 168)',
-                        'rgb(63, 55, 201)',
-                        'rgb(67, 97, 238)',
-                        'rgb(72, 149, 239)'
+                        '#C4FFE2',
+                        '#96FEC5',
+                        '#67FBA1',
+                        '#38F577',
+                        '#16C145',
+                        '#088E25',
+                        '#035A11'
                     ]
                 }]
             },
@@ -36,10 +36,16 @@ fetch(url).then(response => response.json())
                     y: {
                         beginAtZero: true
                     }
+                },
+                color: '#021E53',
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
                 }
             }
         })
     }
+
     
 )
 
