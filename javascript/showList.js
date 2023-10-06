@@ -1,9 +1,10 @@
 const respostas = document.querySelector('.respostas')
 
 const url = 'http://localhost:3002/api/get'
-let lista = []
+
 fetch(url).then(response => response.json())
     .then(data => data.map(answer => {
+        console.log(answer)
         //linha
         let row = document.createElement('tr') //table row
         //itens
@@ -22,13 +23,13 @@ fetch(url).then(response => response.json())
         nome.innerText = answer.nome
         ra.innerText = answer.ra
         email.innerText = answer.email
-        web.innerText = answer.disciplinas.web
-        mobile.innerText = answer.disciplinas.mobile
-        desktop.innerText = answer.disciplinas.desktop
-        games.innerText = answer.disciplinas.games
-        infra.innerText = answer.disciplinas.infra
-        seguranca.innerText = answer.disciplinas.seguranca
-        projetos.innerText = answer.disciplinas.projetos
+        web.innerText = answer.web
+        mobile.innerText = answer.mobile
+        desktop.innerText = answer.desktop
+        games.innerText = answer.games
+        infra.innerText = answer.infra
+        seguranca.innerText = answer.seg
+        projetos.innerText = answer.projetos
 
         row.appendChild(nome)
         row.appendChild(ra)
