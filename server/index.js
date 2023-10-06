@@ -31,7 +31,7 @@ app.post('/api/create', (req, res) => {
     const seguranca = req.body.disciplinas.seguranca;
     const projetos = req.body.disciplinas.projetos;
 
-    db.query("INSERT INTO research_form (nome, ra, email, web, mobile, desktop, games, infra, seg, projetos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",[nome, ra, email, web, mobile, desktop, games, infra, seguranca, projetos], (err, result) => {
+    db.query("INSERT INTO research_form (nome, ra, email, web, mobile, desktop, games, infra, seg, projetos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [nome, ra, email, web, mobile, desktop, games, infra, seguranca, projetos], (err, result) => {
         if (err) {
             console.log(err)
         }
