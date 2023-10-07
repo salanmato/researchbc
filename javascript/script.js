@@ -19,15 +19,29 @@ function getFormData(e) {
             projetos: researchForms.querySelector('#projetos').value
         }
     }
-    
-    saveInLocalStorage(formData)
-}
 
-//transforma em JSON / Salva no LocalStorage
-function saveInLocalStorage(formData) {
-    let answerList = localStorage.getItem('respostas') ? JSON.parse(localStorage.getItem('respostas')) : []
-    answerList.push(formData)
-    localStorage.setItem('respostas', JSON.stringify(answerList))
+    const url = 'http://localhost:3002/api/create'
+
+    const postData = async (url, data)=>{
+        const res = await fetch(url, {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+        console.log(res);
+        try {
+            const received = await res.json();
+            console.log(received);
+            return received;
+        }
+        catch(error) {
+            console.log('ERROR: '+ error);
+        }
+    };
+    postData(url, formData);
 }
 
 //inicia a chamada
