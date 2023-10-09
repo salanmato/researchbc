@@ -137,6 +137,46 @@ input[type=email]:focus {
     box-shadow: none;
 }
 
+/* login para visualizar a tabela */
+#login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+#login label {
+    font-size: 30px;
+}
+
+#login input[type=password]{
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid var(--font-color);
+    margin-top: 20px;
+    outline: none;
+    font-size: 24px;
+    color: var(--font-color);
+    background-color: var(--back-color);
+    text-align: center;
+
+    transition: all ease-in 0.2s;
+}
+
+#login input[type=password]:focus{
+    transform: scale(1.01);
+    border: 1px solid var(--font-color);
+    transform: translate(0, -2px);
+    box-shadow: 0 3px var(--font-color);
+    background-color: var(--second-color);
+}
+
+#login input[type=password]::placeholder{
+    color: var(--font-color);
+}
+
 /* style da tabela */
 table {
     background-color: var(--table-color);

@@ -2,10 +2,12 @@ const tableDiv = document.querySelector('#table-div')
 const form = document.querySelector('#login')
 const password = document.querySelector('#password')
 
+const senha = 'ADS2NB'
+
 const url = 'http://localhost:3002/api/get'
 
 form.addEventListener('submit', (e) => {
-    if(password.value == 12){
+    if(password.value === senha){
         e.preventDefault()
 
         form.remove()
@@ -103,7 +105,11 @@ fetch(url).then(response => response.json())
     }))
     .catch(error => console.log(error))
     }else{
-        alert('SENHA ERRADA!')
+        if(!password.value){
+            alert('Digite sua senha!')
+        }else{
+            alert('Senha errada!')
+        }
     }
 })
 
