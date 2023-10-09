@@ -14,24 +14,13 @@
         <h1><a href="/html/lista.html">respostas</a></h1>
         <h1><a href="/html/resultados.html">resultados</a></h1>
     </header>
-    <div>
-        <table>
-            <thead>
-                <th>Nome</th>
-                <th>RA</th>
-                <th>Email</th>
-                <th>WEB</th>
-                <th>Mobile</th>
-                <th>Desktop</th>
-                <th>Games</th>
-                <th>Infraestrutura</th>
-                <th>Segurança</th>
-                <th>Projetos</th>
-            </thead>
-            <tbody class="respostas">
+    <form id="login">
+        <label for="password" name="password">Digite sua senha:</label>
+        <input type="password" name="password" title="password" placeholder="password" id="password">
 
-            </tbody>
-        </table>
+        <input id="submit-button" type="submit" value="checar" />
+    </form>
+    <div id="table-div">
     </div>
     <script src="/javascript/showList.js"></script>
 </body>

@@ -1,10 +1,67 @@
-const respostas = document.querySelector('.respostas')
+const tableDiv = document.querySelector('#table-div')
+const form = document.querySelector('#login')
+const password = document.querySelector('#password')
 
 const url = 'http://localhost:3002/api/get'
 
+form.addEventListener('submit', (e) => {
+    if(password.value == 12){
+        e.preventDefault()
+
+        form.remove()
+        
+        //apagar tabela caso já tenha sido criada
+        let actualTable = document.querySelector('table')
+        if (actualTable){
+            actualTable.remove()
+        }
+
+        //criando tabela
+        let table = document.createElement('table')
+        let thead = document.createElement('thead')
+        let tbody = document.createElement('tbody')
+
+        let thNome = document.createElement('th')
+        let thRA = document.createElement('th')
+        let thEmail = document.createElement('th')
+        let thWEB = document.createElement('th')
+        let thMobile = document.createElement('th')
+        let thDesktop = document.createElement('th')
+        let thGames = document.createElement('th')
+        let thInfra = document.createElement('th')
+        let thSeg = document.createElement('th')
+        let thProjetos = document.createElement('th')
+
+        thNome.innerText = 'nome'
+        thRA.innerText = 'ra'
+        thEmail.innerText = 'email'
+        thWEB.innerText = 'web'
+        thMobile.innerText = 'mobile'
+        thDesktop.innerText = 'desktop'
+        thGames.innerText = 'games'
+        thInfra.innerText = 'infra'
+        thSeg.innerText = 'seg'
+        thProjetos.innerText = 'projetos'
+
+        thead.appendChild(thNome)
+        thead.appendChild(thRA)
+        thead.appendChild(thEmail)
+        thead.appendChild(thWEB)
+        thead.appendChild(thMobile)
+        thead.appendChild(thDesktop)
+        thead.appendChild(thGames)
+        thead.appendChild(thInfra)
+        thead.appendChild(thSeg)
+        thead.appendChild(thProjetos)
+
+        table.appendChild(thead)
+        table.appendChild(tbody)
+
+        tableDiv.appendChild(table)
+
 fetch(url).then(response => response.json())
+
     .then(data => data.map(answer => {
-        console.log(answer)
         //linha
         let row = document.createElement('tr') //table row
         //itens
@@ -42,6 +99,12 @@ fetch(url).then(response => response.json())
         row.appendChild(seguranca)
         row.appendChild(projetos)
 
-        respostas.appendChild(row)
+        tbody.appendChild(row)
     }))
     .catch(error => console.log(error))
+    }else{
+        alert('SENHA ERRADA!')
+    }
+})
+
+
