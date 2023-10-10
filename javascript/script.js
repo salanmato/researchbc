@@ -1,10 +1,8 @@
 const researchForms = document.querySelector('#research-forms')
-const submitButton = document.querySelector('#submit-button')
-
+const url = 'http://localhost:3002'
 
 //agrupar as entradas e transformar em objeto
-function getFormData(e) {
-
+function getFormData() {
     const formData = {
         name: researchForms.querySelector('#name').value.trim(),
         ra: researchForms.querySelector('#ra').value.trim(),
@@ -20,29 +18,50 @@ function getFormData(e) {
         }
     }
 
-    const url = 'http://localhost:3002/api/create'
-
-    const postData = async (url, data)=>{
-        const res = await fetch(url, {
+    const postData = async (url, data) => {
+        const res = await fetch(`${url}/api/create`, {
             method: 'POST',
             credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
-        });
-        console.log(res);
+        })
+ //       console.log(res);
         try {
             const received = await res.json();
-            console.log(received);
+            //console.log(received);
             return received;
         }
-        catch(error) {
-            console.log('ERROR: '+ error);
+        catch (error) {
+            console.log('ERROR: ' + error);
         }
-    };
-    postData(url, formData);
+    }
+
+    postData(url, formData)
+
 }
 
 //inicia a chamada
-researchForms.addEventListener('submit', getFormData)
+researchForms.addEventListener('submit', e => {
+    e.preventDefault()
+
+    //checando se o RA já foi utilizado ou email
+    fetch(`${url}/api/get`)
+        .then(response => response.json())
+        .then(data => {
+            let verifica = data.map(resposta => {
+                if (parseInt(resposta.ra) == researchForms.querySelector('#ra').value || resposta.email == researchForms.querySelector('#email').value) {
+                    return 1
+                }
+            })
+            if (verifica.indexOf(1) > -1) {
+                alert('RA ou email já utilizados')
+                location.reload()
+            } else {
+                getFormData()
+                alert('Formulário recebido!')
+                location.reload()
+            }
+        })
+})

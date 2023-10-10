@@ -19,7 +19,6 @@ app.get("/api/get", (req, res) => {
 
 
 app.post('/api/create', (req, res) => {
-    console.log(req)
     const nome = req.body.name;
     const ra = req.body.ra;
     const email = req.body.email;
@@ -35,7 +34,7 @@ app.post('/api/create', (req, res) => {
         if (err) {
             console.log(err)
         }
-        console.log(result)
+//        console.log(result)
     });
 })
 
