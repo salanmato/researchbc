@@ -1,4 +1,4 @@
-const url = 'http://0.0.0.0:3002/api/get' // substituir pelo ip da sua máquina
+const url = 'http://0.0.0.0:3002/api/get' // substituir pelo ip da sua máquina / servidor
 
 fetch(url).then(response => response.json())
     .then(respostas => {
