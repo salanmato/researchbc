@@ -4,7 +4,7 @@ const password = document.querySelector('#password')
 
 const senha = 'ADS2NB'
 
-const url = 'http://10.10.90.144:3002/api/get'
+const url = 'http://0.0.0.0:3002/api/get' // substituir pelo ip da sua máquina / servidor
 
 form.addEventListener('submit', (e) => {
     if(password.value === senha){
