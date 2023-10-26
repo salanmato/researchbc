@@ -4,7 +4,7 @@ const password = document.querySelector('#password')
 
 const senha = 'ADS2NB'
 
-const url = 'http://localhost:3002/api/get'
+const url = 'http://10.10.90.144:3002/api/get'
 
 form.addEventListener('submit', (e) => {
     if(password.value === senha){

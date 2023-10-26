@@ -1,4 +1,4 @@
-const url = 'http://localhost:3002/api/get'
+const url = 'http://10.10.90.144:3002/api/get'
 
 fetch(url).then(response => response.json())
     .then(respostas => {
