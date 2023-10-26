@@ -1,3 +1,10 @@
+# instalação de módulos do node.js
+
+npm install cors express  mysql
+
+
+# criação de database + tabela no mysql
+
 create database research_db;
 
 use research_db;
