@@ -1,5 +1,5 @@
 const researchForms = document.querySelector('#research-forms')
-const url = 'http://10.10.90.144:3002'
+const url = 'http://0.0.0.0:3002' // substituir pelo ip da sua máquina / servidor
 
 //agrupar as entradas e transformar em objeto
 function getFormData() {
@@ -19,7 +19,7 @@ function getFormData() {
     }
 
     const postData = async (url, data) => {
-        const res = await fetch(`http://10.10.90.144:3002/api/create`, {
+        const res = await fetch(`${url}/api/create`, {
             method: 'POST',
             credentials: 'same-origin',
             headers: {
