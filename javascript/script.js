@@ -26,11 +26,10 @@ function getFormData() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
-        })
-       console.log(res);
+        });
         try {
             const received = await res.json();
-            console.log(received);
+            //console.log(received);
             return received;
         }
         catch (error) {
