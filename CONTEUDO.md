@@ -10,19 +10,19 @@
 [Fetching data from the server](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)  
 
 ### Cursos
-[Curso de JavaScript e TypeScript do básico ao avançado](https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/)
+[Curso de JavaScript e TypeScript do básico ao avançado](https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/)  
 
 ## Criando um Servidor no seu Windows
-[Localhost for Windows](https://voices.uchicago.edu/dkchristensen/2019/01/28/local-host-for-windows/)
+[Localhost for Windows](https://voices.uchicago.edu/dkchristensen/2019/01/28/local-host-for-windows/)  
 
 ## Lidando com erros
-[req.body is empty in POST requests](https://www.reddit.com/r/node/comments/r8xkk4/reqbody_is_empty_in_post_requests/)
+[req.body is empty in POST requests](https://www.reddit.com/r/node/comments/r8xkk4/reqbody_is_empty_in_post_requests/)  
 
 # Downloads
-[Node.js - O motorzinho do teu back-end](https://nodejs.org/en)
-[MySQL](https://www.mysql.com/downloads/)
-[Visual Studio Code - Ambiente de desenvolvimento bem completo](https://code.visualstudio.com/)
+[Node.js - O motorzinho do teu back-end](https://nodejs.org/en)  
+[MySQL](https://www.mysql.com/downloads/)  
+[Visual Studio Code - Ambiente de desenvolvimento bem completo](https://code.visualstudio.com/)  
 
 # Extra
-[Chart.js - Criação e exibição de Gráficos com JavaScript + HTML](https://www.chartjs.org/docs/latest/getting-started/)
+[Chart.js - Criação e exibição de Gráficos com JavaScript + HTML](https://www.chartjs.org/docs/latest/getting-started/)  
 
