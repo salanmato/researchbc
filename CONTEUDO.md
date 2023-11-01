@@ -3,11 +3,11 @@
 # Tutoriais e Cursos
 ## Desenvolvimento
 ### Tutoriais
-[React JS Tutorial – Build a Weather App With Cities Autocomplete](https://youtu.be/Reny0cTTv24?si=2BOZgxJj73KWATKV)
-[Clone do NETFLIX em REACTJS para Iniciantes](https://www.youtube.com/live/tBweoUiMsDg?si=VF2rY0gEfWt9sWWI)
-[How to implement a server for ReactJS and MySQL application](https://www.educative.io/answers/how-to-implement-a-server-for-reactjs-and-mysql-application)
-[Database Programming in HTML Using JavaScript Explained to Kids](https://codinghero.ai/database-programming-in-html-using-javascript-explained-to-kids/)
-[Fetching data from the server](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+[React JS Tutorial – Build a Weather App With Cities Autocomplete](https://youtu.be/Reny0cTTv24?si=2BOZgxJj73KWATKV)  
+[Clone do NETFLIX em REACTJS para Iniciantes](https://www.youtube.com/live/tBweoUiMsDg?si=VF2rY0gEfWt9sWWI)  
+[How to implement a server for ReactJS and MySQL application](https://www.educative.io/answers/how-to-implement-a-server-for-reactjs-and-mysql-application)  
+[Database Programming in HTML Using JavaScript Explained to Kids](https://codinghero.ai/database-programming-in-html-using-javascript-explained-to-kids/)  
+[Fetching data from the server](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)  
 
 ### Cursos
 [Curso de JavaScript e TypeScript do básico ao avançado](https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/)
